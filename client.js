@@ -2,7 +2,7 @@ const employees = [
   {
     name: 'Atticus',
     employeeNumber: '24050',
-    annualSalary: '47000',
+    annualSalary: '470000',
     reviewRating: 3
   },
   {
@@ -41,6 +41,9 @@ const employees = [
 
 console.log( employees );
 
+let bonusPercent = 0;
+let bonusAmount = 0;
+
 function calcBonus(employees, name) {
 
   let currentEmployee;
@@ -50,12 +53,13 @@ function calcBonus(employees, name) {
     if (employee.name === name) {
       // set variable to equal desired employee for evaluation
       currentEmployee = employee;
-      console.log(currentEmployee)
+      console.log(currentEmployee);
     }
   }
 
-  let bonusPercent = 0;
-  let bonusAmount = 0;
+  
+
+ 
 
 // Determine bonus percentage based on review rating
   if (currentEmployee.reviewRating <= 2) {
@@ -68,10 +72,29 @@ function calcBonus(employees, name) {
      if (currentEmployee.employeeNumber.length > 4 ) {
        bonusPercent += 5;
        console.log(bonusPercent);
-      
+       console.log(income(currentEmployee));
     }
   }
-} 
+ } 
+
+
+ function income(currentEmployee) {
+   if (currentEmployee.annualSalary > 65000) {
+    bonusPercent -= 1;
+   }
+   return bonusPercent
+ }
+
+
+
+
+// function seniority()
+
+// function bonusScope()
+
+
+
+
 
 
 
