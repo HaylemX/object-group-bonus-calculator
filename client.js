@@ -1,7 +1,7 @@
 const employees = [
   {
     name: 'Atticus',
-    employeeNumber: '2405',
+    employeeNumber: '24050',
     annualSalary: '47000',
     reviewRating: 3
   },
@@ -50,14 +50,52 @@ function calcBonus(employees, name) {
     if (employee.name === name) {
       // set variable to equal desired employee for evaluation
       currentEmployee = employee;
+      console.log(currentEmployee)
     }
   }
 
   let bonusPercent = 0;
   let bonusAmount = 0;
 
+// Determine bonus percentage based on review rating
+  if (currentEmployee.reviewRating <= 2) {
+    let final = new CreatedArray(currentEmployee.name, bonusAmount, currentEmployee.annualSalary, bonusAmount)
+    return final;
+  } 
+  else if (currentEmployee.reviewRating = 3) {
+    bonusPercent += 4;
+    console.log(bonusPercent);
+     if (currentEmployee.employeeNumber.length > 4 ) {
+       bonusPercent += 5;
+       console.log(bonusPercent);
+      
+    }
+  }
+} 
 
-}
 
 
-console.log(calcBonus(employees, 'Jem'));
+
+
+
+
+
+// else if (currentEmployee.reviewRating = 4) {
+// }
+// else if (currentEmployee.reviewRating = 5) {
+// }
+
+
+
+// function CreateArray(name, bonusPercentage,totalCompensation,totalBonus) {
+//   this.name = name;
+//   this.bonusPercentage = bonusPercentage;
+//   this.totalCompensation = totalCompensation;
+//   this.totalBonus = totalBonus;
+// }
+// CreateArray('Jake',200,100,300);
+// console.log(CreateArray('Jake',200,100,300))
+
+console.log(calcBonus(employees, 'Atticus'));
+
+
