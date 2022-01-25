@@ -40,3 +40,24 @@ const employees = [
 // Ask questions when you don't.
 
 console.log( employees );
+
+function calcBonus(employees, name) {
+
+  let currentEmployee;
+  
+  for (let employee of employees) {
+    
+    if (employee.name === name) {
+      // set variable to equal desired employee for evaluation
+      currentEmployee = employee;
+    }
+  }
+
+  let bonusPercent = 0;
+  let bonusAmount = 0;
+
+
+}
+
+
+console.log(calcBonus(employees, 'Jem'));
